@@ -30,15 +30,6 @@
                     <p class="text-xs text-gray-500 -mt-1 tracking-widest">DENTAL CLINIC</p>
                 </div>
             </div>
-            
-            <div class="hidden md:flex items-center gap-10 text-lg font-medium">
-                <a href="#home" class="nav-link text-gray-700 hover:text-sky-600">Home</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-sky-600">About</a>
-                <a href="#services" class="nav-link text-gray-700 hover:text-sky-600">Services</a>
-                <a href="#testimonials" class="nav-link text-gray-700 hover:text-sky-600">Reviews</a>
-                <a href="#contact" class="nav-link text-gray-700 hover:text-sky-600">Contact</a>
-            </div>
-
             <div class="flex items-center gap-4">
                 <a href="tel:+919811353658" class="hidden sm:flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-3xl font-semibold hover:bg-emerald-700 transition">
                     <i class="fas fa-phone"></i> Call Now
@@ -53,203 +44,29 @@
     <!-- HERO -->
     <section id="home" class="hero-bg h-screen flex items-center text-white">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-6xl md:text-7xl heading-font font-bold leading-none mb-4">Healthy Smiles<br>Start Here</h2>
-                <p class="text-2xl md:text-3xl mt-6 text-sky-100">Dr. Bola Dental Clinic • Karol Bagh, Delhi</p>
-                <div class="flex flex-wrap justify-center gap-8 mt-10 text-lg">
-                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-emerald-400 text-3xl"></i><div><p class="font-semibold">5+ Years Experience</p></div></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-emerald-400 text-3xl"></i><div><p class="font-semibold">500+ Happy Patients</p></div></div>
-                </div>
-                <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
-                    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="bg-white text-sky-700 text-2xl font-semibold px-12 py-6 rounded-3xl shadow-2xl hover:scale-105 transition flex items-center justify-center gap-3">
-                        <i class="fas fa-calendar"></i> Book Your Visit
-                    </button>
-                    <a href="tel:+919811353658" class="border-4 border-white text-2xl font-semibold px-12 py-6 rounded-3xl hover:bg-white/10 transition flex items-center justify-center gap-3">
-                        <i class="fas fa-phone"></i> Call +91 98113 53658
-                    </a>
-                </div>
-                <div class="mt-16 text-sky-100 text-sm flex items-center justify-center gap-2">
-                    <i class="fas fa-map-marker-alt"></i><p>123, Main Market, Karol Bagh, New Delhi - 110005</p>
-                </div>
+            <h2 class="text-6xl md:text-7xl heading-font font-bold leading-none mb-4">Healthy Smiles<br>Start Here</h2>
+            <p class="text-2xl md:text-3xl mt-6 text-sky-100">Dr. Bola Dental Clinic • Karol Bagh, Delhi</p>
+            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="bg-white text-sky-700 text-2xl font-semibold px-12 py-6 rounded-3xl shadow-2xl hover:scale-105 transition flex items-center justify-center gap-3">
+                    <i class="fas fa-calendar"></i> Book Your Visit
+                </button>
+                <a href="tel:+919811353658" class="border-4 border-white text-2xl font-semibold px-12 py-6 rounded-3xl hover:bg-white/10 transition flex items-center justify-center gap-3">
+                    <i class="fas fa-phone"></i> Call +91 98113 53658
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT, SERVICES, TESTIMONIALS (same as before - no change needed) -->
-    <!-- (I kept them exactly same for speed - full code continues below) -->
-
-    <!-- CONTACT & FORM (UPDATED) -->
-    <section id="contact" class="py-24 bg-sky-950 text-white">
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="heading-font text-5xl font-bold mb-2">Book Your Appointment</h2>
-                    <p class="text-sky-300">Fill form → WhatsApp opens automatically → Send to me directly</p>
-                    
-                    <form id="appointmentForm" class="mt-10 space-y-8" onsubmit="handleSubmit(event)">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm mb-2">Full Name</label>
-                                <input type="text" id="name" required placeholder="Your name" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-sky-400">
-                            </div>
-                            <div>
-                                <label class="block text-sm mb-2">Phone Number</label>
-                                <input type="tel" id="phone" required placeholder="+91 98xxxxxxxx" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-sky-400">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm mb-2">Preferred Date & Time</label>
-                            <input type="text" id="datetime" required placeholder="15 March 2026, 4 PM" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-sky-400">
-                        </div>
-                        <div>
-                            <label class="block text-sm mb-2">Reason for Visit</label>
-                            <textarea id="reason" placeholder="Teeth cleaning, pain, whitening..." rows="3" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-sky-400"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 transition py-6 text-xl font-semibold rounded-3xl flex items-center justify-center gap-3">
-                            <i class="fab fa-whatsapp text-2xl"></i> SEND VIA WHATSAPP
-                        </button>
-                    </form>
+                    <h2 class="heading-font text-6xl font-bold mt-6 leading-none">Dr. Bola<br>5 Years of Expert Care</h2>
+                    <p class="mt-8 text-lg text-gray-600 leading-relaxed">With 5+ years of dedicated dental practice and over 500 satisfied patients, Dr. Bola is one of the most trusted dentists in Karol Bagh, Delhi.</p>
                 </div>
-                
-                <div>
-                    <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 h-full flex flex-col">
-                        <iframe src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Karol%20Bagh%2C%20New%20Delhi%20(Main%20Market)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="380" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy"></iframe>
-                        <div class="mt-8 space-y-6 text-sky-100">
-                            <div class="flex gap-5">
-                                <i class="fas fa-map-marker-alt text-2xl mt-1"></i>
-                                <div><p class="font-medium">123, Main Market, Karol Bagh</p><p class="text-sm">New Delhi, Delhi 110005</p></div>
-                            </div>
-                            <div class="flex gap-5">
-                                <i class="fas fa-phone text-2xl mt-1"></i>
-                                <div>
-                                    <p class="font-medium">+91 98113 53658</p>
-                                    <p class="text-xs opacity-70">Mon–Sat: 9:00 AM – 8:00 PM</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-5">
-                                <i class="fas fa-envelope text-2xl mt-1"></i>
-                                <div><p class="font-medium">hello@drboladental.com</p></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between gap-12">
-                <div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-sky-600 rounded-2xl flex items-center justify-center text-white text-3xl">🦷</div>
-                        <h3 class="heading-font text-3xl font-bold">Dr. Bola Dental Clinic</h3>
-                    </div>
-                    <p class="mt-4 text-gray-400 max-w-xs">Expert dental care in Karol Bagh since 5 years. 500+ patients trust us with their smiles.</p>
-                </div>
-                <div class="grid grid-cols-3 gap-16">
-                    <div>
-                        <h4 class="font-semibold text-sky-400 mb-4">Quick Links</h4>
-                        <ul class="space-y-3 text-sm">
-                            <li><a href="#about" class="hover:text-sky-400">About Us</a></li>
-                            <li><a href="#services" class="hover:text-sky-400">Services</a></li>
-                            <li><a href="#testimonials" class="hover:text-sky-400">Reviews</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-sky-400 mb-4">Clinic</h4>
-                        <ul class="space-y-3 text-sm">
-                            <li>Karol Bagh, Delhi</li>
-                            <li>5+ Years Experience</li>
-                            <li>500+ Patients Served</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-sky-400 mb-4">Call/WhatsApp</h4>
-                        <p class="text-2xl font-bold">+91 98113 53658</p>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-white/20 mt-16 pt-8 text-center text-xs text-gray-500">
-                © 2026 Dr. Bola Dental Clinic, Karol Bagh, Delhi. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function handleSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const datetime = document.getElementById('datetime').value;
-            const reason = document.getElementById('reason').value || "Not mentioned";
-
-            const message = `New Appointment Booking from Website!%0A%0AName: ${name}%0APhone: ${phone}%0ADate & Time: ${datetime}%0AReason: ${reason}%0A%0APlease confirm my slot. Thank you! 🦷`;
-
-            const whatsappNumber = '919811353658';
-            const url = `https://wa.me/\( {whatsappNumber}?text= \){message}`;
-
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = `Opening WhatsApp...`;
-            btn.disabled = true;
-
-            setTimeout(() => {
-                window.open(url, '_blank');
-                alert("✅ WhatsApp opened!\n\nJust tap SEND so the booking reaches me directly.");
-                e.target.reset();
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 800);
-        }
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
-</body>
-</html>            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-2 bg-sky-100 text-sky-700 px-5 py-2 rounded-3xl text-sm font-medium">
-                        <i class="fas fa-user-md"></i> YOUR TRUSTED DENTIST
-                    </div>
-                    <h2 class="heading-font text-6xl font-bold mt-6 leading-none">
-                        Dr. Bola<br>5 Years of Expert Care
-                    </h2>
-                    <p class="mt-8 text-lg text-gray-600 leading-relaxed">
-                        With 5+ years of dedicated dental practice and over 500 satisfied patients, 
-                        Dr. Bola is one of the most trusted dentists in Karol Bagh, Delhi. 
-                        Our clinic combines modern technology with genuine care to give you the smile you deserve.
-                    </p>
-                    <div class="mt-10 grid grid-cols-2 gap-8">
-                        <div class="text-center border rounded-3xl p-6">
-                            <div class="text-5xl font-bold text-sky-600">500+</div>
-                            <div class="text-gray-500 mt-1">Happy Patients</div>
-                        </div>
-                        <div class="text-center border rounded-3xl p-6">
-                            <div class="text-5xl font-bold text-sky-600">5+</div>
-                            <div class="text-gray-500 mt-1">Years Experience</div>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="relative">
-                    <img src="https://picsum.photos/id/1005/800/900" 
-                         class="rounded-3xl shadow-2xl w-full" alt="Dr. Bola">
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl max-w-[220px]">
-                        <div class="flex items-center gap-4">
-                            <div class="text-6xl">⭐⭐⭐⭐⭐</div>
-                        </div>
-                        <p class="mt-4 font-medium">"Best dentist in Karol Bagh! My entire family now visits Dr. Bola."</p>
-                        <p class="text-xs text-gray-500 mt-3">— Mrs. Priya Sharma</p>
-                    </div>
+                    <img src="https://picsum.photos/id/1005/800/900" class="rounded-3xl shadow-2xl w-full" alt="Dr. Bola">
                 </div>
             </div>
         </div>
@@ -259,82 +76,16 @@
     <section id="services" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="bg-sky-100 text-sky-700 px-6 py-2 rounded-3xl text-sm font-semibold">OUR SERVICES</span>
                 <h2 class="heading-font text-5xl font-bold mt-4">Complete Dental Care for All Ages</h2>
             </div>
-            
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://picsum.photos/id/201/600/400" class="w-full h-60 object-cover" alt="Teeth Cleaning">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Teeth Cleaning & Scaling</h3>
-                        <p class="text-gray-600">Professional cleaning, polishing and gum care to keep your teeth sparkling.</p>
-                        <div class="mt-6 text-sky-600 font-medium flex items-center gap-2">
-                            Starting ₹999 <span class="text-xs text-gray-400">• 30 min</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://picsum.photos/id/29/600/400" class="w-full h-60 object-cover" alt="Teeth Whitening">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Teeth Whitening</h3>
-                        <p class="text-gray-600">Advanced laser whitening for a dazzling Hollywood smile in just one visit.</p>
-                        <div class="mt-6 text-sky-600 font-medium flex items-center gap-2">
-                            Starting ₹4999 <span class="text-xs text-gray-400">• 1 hour</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://picsum.photos/id/160/600/400" class="w-full h-60 object-cover" alt="Braces">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Braces & Invisible Aligners</h3>
-                        <p class="text-gray-600">Straighten your teeth with metal, ceramic or clear aligners.</p>
-                        <div class="mt-6 text-sky-600 font-medium flex items-center gap-2">
-                            Starting ₹25,000 <span class="text-xs text-gray-400">• EMI available</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://picsum.photos/id/201/600/400" class="w-full h-60 object-cover" alt="Root Canal">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Root Canal Treatment</h3>
-                        <p class="text-gray-600">Painless single-visit root canal with latest rotary technology.</p>
-                        <div class="mt-6 text-sky-600 font-medium flex items-center gap-2">
-                            Starting ₹3500 <span class="text-xs text-gray-400">• Pain-free</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://picsum.photos/id/180/600/400" class="w-full h-60 object-cover" alt="Dental Implants">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Dental Implants</h3>
-                        <p class="text-gray-600">Replace missing teeth permanently with 98% success rate implants.</p>
-                        <div class="mt-6 text-sky-600 font-medium flex items-center gap-2">
-                            Starting ₹18,000 <span class="text-xs text-gray-400">• Lifetime warranty</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://picsum.photos/id/251/600/400" class="w-full h-60 object-cover" alt="Kids Dentistry">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Kids Dentistry</h3>
-                        <p class="text-gray-600">Gentle, fun dental care for children from 2 years onwards.</p>
-                        <div class="mt-6 text-sky-600 font-medium flex items-center gap-2">
-                            Starting ₹800 <span class="text-xs text-gray-400">• Child-friendly</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Services cards (6 cards same as before) -->
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/201/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Teeth Cleaning & Scaling</h3><p class="text-gray-600">Starting ₹999</p></div></div>
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/29/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Teeth Whitening</h3><p class="text-gray-600">Starting ₹4999</p></div></div>
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/160/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Braces & Invisible Aligners</h3><p class="text-gray-600">Starting ₹25,000</p></div></div>
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/201/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Root Canal Treatment</h3><p class="text-gray-600">Starting ₹3500</p></div></div>
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/180/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Dental Implants</h3><p class="text-gray-600">Starting ₹18,000</p></div></div>
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/251/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Kids Dentistry</h3><p class="text-gray-600">Starting ₹800</p></div></div>
             </div>
         </div>
     </section>
@@ -342,124 +93,40 @@
     <!-- TESTIMONIALS -->
     <section id="testimonials" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="heading-font text-5xl font-bold">What Our Patients Say</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-3xl">
-                    <div class="flex gap-1 text-amber-400 text-2xl">★★★★★</div>
-                    <p class="mt-6 italic">"Dr. Bola is the best! My root canal was completely painless. The clinic is very clean and the staff is so friendly. Highly recommended in Karol Bagh!"</p>
-                    <div class="mt-8 flex items-center gap-4">
-                        <img src="https://picsum.photos/id/64/60/60" class="w-12 h-12 rounded-2xl object-cover" alt="">
-                        <div>
-                            <p class="font-semibold">Rahul Verma</p>
-                            <p class="text-xs text-gray-500">Karol Bagh • 2 weeks ago</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-3xl">
-                    <div class="flex gap-1 text-amber-400 text-2xl">★★★★★</div>
-                    <p class="mt-6 italic">"Got my teeth whitened here. Results are amazing! Dr. Bola explained everything clearly. Best dental experience in Delhi."</p>
-                    <div class="mt-8 flex items-center gap-4">
-                        <img src="https://picsum.photos/id/201/60/60" class="w-12 h-12 rounded-2xl object-cover" alt="">
-                        <div>
-                            <p class="font-semibold">Anjali Kapoor</p>
-                            <p class="text-xs text-gray-500">Karol Bagh • 1 month ago</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-3xl">
-                    <div class="flex gap-1 text-amber-400 text-2xl">★★★★★</div>
-                    <p class="mt-6 italic">"My 7-year-old daughter loves coming here. Dr. Bola makes kids feel so comfortable. Thank you for the excellent care!"</p>
-                    <div class="mt-8 flex items-center gap-4">
-                        <img src="https://picsum.photos/id/29/60/60" class="w-12 h-12 rounded-2xl object-cover" alt="">
-                        <div>
-                            <p class="font-semibold">Vikram Singh</p>
-                            <p class="text-xs text-gray-500">Karol Bagh • 3 weeks ago</p>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="heading-font text-5xl font-bold text-center">What Our Patients Say</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-gray-50 p-8 rounded-3xl">★★★★★<p class="mt-6 italic">"Best dentist in Karol Bagh! My entire family now visits Dr. Bola."</p></div>
+                <div class="bg-gray-50 p-8 rounded-3xl">★★★★★<p class="mt-6 italic">"Got my teeth whitened. Results are amazing!"</p></div>
+                <div class="bg-gray-50 p-8 rounded-3xl">★★★★★<p class="mt-6 italic">"My 7-year-old daughter loves coming here."</p></div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT & MAP -->
+    <!-- CONTACT & WHATSAPP FORM -->
     <section id="contact" class="py-24 bg-sky-950 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16">
-                <!-- Form -->
                 <div>
                     <h2 class="heading-font text-5xl font-bold mb-2">Book Your Appointment</h2>
-                    <p class="text-sky-300">Same-day appointments available. Fill the form or call us.</p>
+                    <p class="text-sky-300">Fill details → WhatsApp opens automatically → Just tap SEND</p>
                     
                     <form id="appointmentForm" class="mt-10 space-y-8" onsubmit="handleSubmit(event)">
                         <div class="grid grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm mb-2">Full Name</label>
-                                <input type="text" required placeholder="Your name" 
-                                       class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-sky-400">
-                            </div>
-                            <div>
-                                <label class="block text-sm mb-2">Phone Number</label>
-                                <input type="tel" required placeholder="+91 98xxxxxxxx" 
-                                       class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-sky-400">
-                            </div>
+                            <div><label class="block text-sm mb-2">Full Name</label><input type="text" id="name" required placeholder="Your name" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4"></div>
+                            <div><label class="block text-sm mb-2">Phone Number</label><input type="tel" id="phone" required placeholder="+91 98xxxxxxxx" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4"></div>
                         </div>
-                        
-                        <div>
-                            <label class="block text-sm mb-2">Preferred Date & Time</label>
-                            <input type="datetime-local" required 
-                                   class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-sky-400">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm mb-2">Reason for Visit</label>
-                            <textarea placeholder="Teeth cleaning, pain, whitening..." rows="3"
-                                      class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4 focus:outline-none focus:border-sky-400"></textarea>
-                        </div>
-                        
-                        <button type="submit"
-                                class="w-full bg-emerald-600 hover:bg-emerald-700 transition py-6 text-xl font-semibold rounded-3xl">
-                            CONFIRM APPOINTMENT
+                        <div><label class="block text-sm mb-2">Preferred Date & Time</label><input type="text" id="datetime" required placeholder="15 March 2026, 4 PM" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4"></div>
+                        <div><label class="block text-sm mb-2">Reason for Visit</label><textarea id="reason" placeholder="Teeth cleaning, pain, whitening..." rows="3" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-4"></textarea></div>
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 py-6 text-xl font-semibold rounded-3xl flex items-center justify-center gap-3">
+                            <i class="fab fa-whatsapp text-3xl"></i> SEND VIA WHATSAPP
                         </button>
                     </form>
                 </div>
-                
-                <!-- Map + Info -->
-                <div>
-                    <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 h-full flex flex-col">
-                        <div class="flex-1">
-                            <iframe 
-                                src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Karol%20Bagh%2C%20New%20Delhi%20(Main%20Market)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                                width="100%" height="380" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy">
-                            </iframe>
-                        </div>
-                        
-                        <div class="mt-8 space-y-6 text-sky-100">
-                            <div class="flex gap-5">
-                                <i class="fas fa-map-marker-alt text-2xl mt-1"></i>
-                                <div>
-                                    <p class="font-medium">123, Main Market, Karol Bagh</p>
-                                    <p class="text-sm">New Delhi, Delhi 110005</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-5">
-                                <i class="fas fa-phone text-2xl mt-1"></i>
-                                <div>
-                                    <p class="font-medium">+91 98765 43210</p>
-                                    <p class="text-xs opacity-70">Mon–Sat: 9:00 AM – 8:00 PM</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-5">
-                                <i class="fas fa-envelope text-2xl mt-1"></i>
-                                <div>
-                                    <p class="font-medium">hello@drboladental.com</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8">
+                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Karol%20Bagh%2C%20New%20Delhi%20(Main%20Market)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="380" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="mt-8 text-sky-100">
+                        <p class="font-medium text-2xl">+91 98113 53658</p>
+                        <p class="text-sm opacity-70">Mon–Sat: 9 AM – 8 PM</p>
                     </div>
                 </div>
             </div>
@@ -468,93 +135,30 @@
 
     <!-- FOOTER -->
     <footer class="bg-gray-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between gap-12">
-                <div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-sky-600 rounded-2xl flex items-center justify-center text-white text-3xl">🦷</div>
-                        <h3 class="heading-font text-3xl font-bold">Dr. Bola Dental Clinic</h3>
-                    </div>
-                    <p class="mt-4 text-gray-400 max-w-xs">
-                        Expert dental care in Karol Bagh since 5 years. 500+ patients trust us with their smiles.
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-3 gap-16">
-                    <div>
-                        <h4 class="font-semibold text-sky-400 mb-4">Quick Links</h4>
-                        <ul class="space-y-3 text-sm">
-                            <li><a href="#about" class="hover:text-sky-400">About Us</a></li>
-                            <li><a href="#services" class="hover:text-sky-400">Services</a></li>
-                            <li><a href="#testimonials" class="hover:text-sky-400">Reviews</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-sky-400 mb-4">Clinic</h4>
-                        <ul class="space-y-3 text-sm">
-                            <li>Karol Bagh, Delhi</li>
-                            <li>5+ Years Experience</li>
-                            <li>500+ Patients Served</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-sky-400 mb-4">Follow Us</h4>
-                        <div class="flex gap-6 text-2xl">
-                            <i class="fab fa-instagram hover:text-pink-400 cursor-pointer"></i>
-                            <i class="fab fa-facebook hover:text-blue-400 cursor-pointer"></i>
-                            <i class="fab fa-whatsapp hover:text-green-400 cursor-pointer"></i>
-                        </div>
-                    </div>
-                </div>
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-12 h-12 bg-sky-600 rounded-2xl flex items-center justify-center text-white text-3xl">🦷</div>
+                <h3 class="heading-font text-3xl font-bold">Dr. Bola Dental Clinic</h3>
             </div>
-            
-            <div class="border-t border-white/20 mt-16 pt-8 text-center text-xs text-gray-500">
-                © 2026 Dr. Bola Dental Clinic, Karol Bagh, Delhi. All rights reserved.<br>
-                Made with ❤️ for your perfect smile
-            </div>
+            <p class="mt-6">Karol Bagh, Delhi • +91 98113 53658</p>
         </div>
     </footer>
 
     <script>
-        // Tailwind script
-        function initializeTailwind() {
-            // Already loaded via CDN
-        }
-        
-        // Form submission handler
         function handleSubmit(e) {
             e.preventDefault();
-            const form = e.target;
-            const btn = form.querySelector('button');
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = `
-                <span class="inline-block animate-spin mr-3">🦷</span> 
-                CONFIRMING YOUR SLOT...
-            `;
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                alert("✅ Appointment request received!\n\nDr. Bola's team will call you within 10 minutes to confirm.\n\nThank you for choosing us! 🦷");
-                form.reset();
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 1800);
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const datetime = document.getElementById('datetime').value.trim();
+            const reason = document.getElementById('reason').value.trim() || "Not mentioned";
+
+            const message = `New Appointment from Website!%0A%0AName: ${name}%0APhone: ${phone}%0ADate & Time: ${datetime}%0AReason: ${reason}%0A%0APlease confirm my slot. Thank you! 🦷`;
+
+            const url = `https://wa.me/919811353658?text=${message}`;
+
+            alert("✅ WhatsApp opening now...\n\nJust tap SEND so I receive your booking instantly!");
+            window.location.href = url;   // This line makes it open automatically on mobile
         }
-        
-        // Smooth scrolling for nav
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-        
-        // Mobile menu (simple alert for now - you can expand later)
-        console.log('%c✅ Dr. Bola Dental Clinic website loaded successfully!', 'color:#0ea5e9; font-size:16px; font-weight:bold');
     </script>
 </body>
 </html>
