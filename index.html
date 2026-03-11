@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="flex items-center gap-4">
-                <a href="tel:+919811353658" class="hidden sm:flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-3xl font-semibold hover:bg-emerald-700 transition">
+                <a href="tel:+919220311241" class="hidden sm:flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-3xl font-semibold hover:bg-emerald-700 transition">
                     <i class="fas fa-phone"></i> Call Now
                 </a>
                 <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="bg-sky-600 text-white px-8 py-3 rounded-3xl font-semibold hover:bg-sky-700 transition flex items-center gap-2">
@@ -50,8 +50,8 @@
                 <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="bg-white text-sky-700 text-2xl font-semibold px-12 py-6 rounded-3xl shadow-2xl hover:scale-105 transition flex items-center justify-center gap-3">
                     <i class="fas fa-calendar"></i> Book Your Visit
                 </button>
-                <a href="tel:+919811353658" class="border-4 border-white text-2xl font-semibold px-12 py-6 rounded-3xl hover:bg-white/10 transition flex items-center justify-center gap-3">
-                    <i class="fas fa-phone"></i> Call +91 98113 53658
+                <a href="tel:+919220311241" class="border-4 border-white text-2xl font-semibold px-12 py-6 rounded-3xl hover:bg-white/10 transition flex items-center justify-center gap-3">
+                    <i class="fas fa-phone"></i> Call +91 92203 11241
                 </a>
             </div>
         </div>
@@ -79,7 +79,6 @@
                 <h2 class="heading-font text-5xl font-bold mt-4">Complete Dental Care for All Ages</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Services cards (6 cards same as before) -->
                 <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/201/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Teeth Cleaning & Scaling</h3><p class="text-gray-600">Starting ₹999</p></div></div>
                 <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/29/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Teeth Whitening</h3><p class="text-gray-600">Starting ₹4999</p></div></div>
                 <div class="service-card bg-white rounded-3xl overflow-hidden shadow-xl"><img src="https://picsum.photos/id/160/600/400" class="w-full h-60 object-cover"><div class="p-8"><h3 class="text-2xl font-semibold mb-3">Braces & Invisible Aligners</h3><p class="text-gray-600">Starting ₹25,000</p></div></div>
@@ -108,7 +107,7 @@
             <div class="grid lg:grid-cols-2 gap-16">
                 <div>
                     <h2 class="heading-font text-5xl font-bold mb-2">Book Your Appointment</h2>
-                    <p class="text-sky-300">Fill details → WhatsApp opens automatically → Just tap SEND</p>
+                    <p class="text-sky-300">Fill details → WhatsApp opens automatically with ready message</p>
                     
                     <form id="appointmentForm" class="mt-10 space-y-8" onsubmit="handleSubmit(event)">
                         <div class="grid grid-cols-2 gap-6">
@@ -125,7 +124,7 @@
                 <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8">
                     <iframe src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Karol%20Bagh%2C%20New%20Delhi%20(Main%20Market)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="380" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy"></iframe>
                     <div class="mt-8 text-sky-100">
-                        <p class="font-medium text-2xl">+91 98113 53658</p>
+                        <p class="font-medium text-2xl">+91 92203 11241</p>
                         <p class="text-sm opacity-70">Mon–Sat: 9 AM – 8 PM</p>
                     </div>
                 </div>
@@ -140,7 +139,7 @@
                 <div class="w-12 h-12 bg-sky-600 rounded-2xl flex items-center justify-center text-white text-3xl">🦷</div>
                 <h3 class="heading-font text-3xl font-bold">Dr. Bola Dental Clinic</h3>
             </div>
-            <p class="mt-6">Karol Bagh, Delhi • +91 98113 53658</p>
+            <p class="mt-6">Karol Bagh, Delhi • +91 92203 11241</p>
         </div>
     </footer>
 
@@ -154,10 +153,20 @@
 
             const message = `New Appointment from Website!%0A%0AName: ${name}%0APhone: ${phone}%0ADate & Time: ${datetime}%0AReason: ${reason}%0A%0APlease confirm my slot. Thank you! 🦷`;
 
-            const url = `https://wa.me/919811353658?text=${message}`;
+            const whatsappUrl = `https://wa.me/919220311241?text=${message}`;
 
-            alert("✅ WhatsApp opening now...\n\nJust tap SEND so I receive your booking instantly!");
-            window.location.href = url;   // This line makes it open automatically on mobile
+            // Show message
+            alert("✅ WhatsApp opening now...\n\nJust tap SEND — booking will reach me instantly!");
+
+            // Strong mobile redirect (works even if pop-up blocked)
+            setTimeout(() => {
+                const link = document.createElement('a');
+                link.href = whatsappUrl;
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }, 500);
         }
     </script>
 </body>
